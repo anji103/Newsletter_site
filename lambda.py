@@ -17,7 +17,7 @@ def send_welcome_email(email, name):
 
         # Send email via SES
         response = ses.send_email(
-            Source='anjisingam103@gmail.com',  # Make sure to replace with your verified email in SES
+            Source='anjisingam55@gmail.com',  # Make sure to replace with your verified email in SES
             Destination={'ToAddresses': [email]},
             Message={
                 'Subject': {'Data': subject},
@@ -84,5 +84,6 @@ def lambda_handler(event, context):
             'body': json.dumps({'error': str(e)}),
             'headers': {'Content-Type': 'application/json'}
         }
+
 
 
